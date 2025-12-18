@@ -81,10 +81,11 @@ const filterItems = document.querySelectorAll("[data-filter-item]");
 const filterFunc = function (selectedValue) {
 
   for (let i = 0; i < filterItems.length; i++) {
+    const category = filterItems[i].dataset.category;
 
-    if (selectedValue === "all") {
+    if (selectedValue === "all" || selectedValue === "tout") {
       filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
+    } else if (selectedValue === category) {
       filterItems[i].classList.add("active");
     } else {
       filterItems[i].classList.remove("active");
@@ -93,6 +94,11 @@ const filterFunc = function (selectedValue) {
   }
 
 }
+
+// Initialize: apply "all" filter on page load to show all projects
+window.addEventListener("DOMContentLoaded", function() {
+  filterFunc("all");
+});
 
 // add event in all filter button items for large screen
 let lastClickedBtn = filterBtn[0];
