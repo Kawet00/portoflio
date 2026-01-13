@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#121212">
   <title>Guileb Yassin Portfolio</title>
   
 <!-- SEO core -->
@@ -31,16 +32,32 @@
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
 
   <!--
-    - custom css link
+    - Resource hints for external resources
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!--
+    - google font link with display=swap for better performance
+  -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"></noscript>
+
+  <!--
+    - Critical CSS inline for above-the-fold content
+  -->
+  <style>
+    :root{--bg-gradient-onyx:linear-gradient(to bottom right,hsl(240,1%,25%) 3%,hsl(0,0%,19%) 97%);--bg-gradient-jet:linear-gradient(to bottom right,hsla(240,1%,18%,.251) 0%,hsla(240,2%,11%,0) 100%),hsl(240,2%,13%);--jet:hsl(0,0%,22%);--onyx:hsl(240,1%,17%);--eerie-black-1:hsl(240,2%,13%);--eerie-black-2:hsl(240,2%,12%);--smoky-black:hsl(0,0%,7%);--white-1:hsl(0,0%,100%);--white-2:hsl(0,0%,98%);--orange-yellow-crayola:hsl(45,100%,72%);--light-gray:hsl(0,0%,84%);--ff-poppins:'Poppins',sans-serif;--fs-1:24px;--fs-2:18px;--fs-6:14px;--fw-300:300;--fw-500:500;--shadow-1:-4px 8px 24px hsla(0,0%,0%,.25);--transition-1:.25s ease}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{background:var(--smoky-black);font-family:var(--ff-poppins)}main{margin:15px 12px;margin-bottom:75px;min-width:259px}.sidebar{background:var(--eerie-black-2);border:1px solid var(--jet);border-radius:20px;padding:15px;box-shadow:var(--shadow-1);margin-bottom:15px;max-height:112px;overflow:hidden;transition:var(--transition-1)}.navbar{position:fixed;bottom:0;left:0;width:100%;background:hsla(240,1%,17%,.75);backdrop-filter:blur(10px);border:1px solid var(--jet);border-radius:12px 12px 0 0;box-shadow:var(--shadow-1);z-index:5}
+  </style>
+
+  <!--
+    - Main stylesheet (non-blocking)
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
 </head>
 
 <body>
@@ -881,15 +898,15 @@
   </script>
 
   <!--
-    - custom js link
+    - custom js link (deferred for non-blocking load)
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js" defer></script>
 
   <!--
-    - ionicon link
+    - ionicon link (async for non-blocking load)
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 
 </body>
 

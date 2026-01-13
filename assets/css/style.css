@@ -124,7 +124,7 @@
   * {
     cursor: auto !important;
   }
-  . cursor, .cursor-follower {
+  .cursor, .cursor-follower {
     display: none;
   }
 }
