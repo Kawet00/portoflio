@@ -50,8 +50,10 @@
     - Critical CSS inline for above-the-fold content
     - Includes: CSS variables, reset, body styles, main layout, sidebar, navbar
     - Generated from style.css lines 18-631 (core layout and navigation)
+    - Minified to reduce HTML size - source can be found in assets/css/style.css
   -->
   <style>
+    /* Critical above-the-fold styles - minified for performance */
     :root{--bg-gradient-onyx:linear-gradient(to bottom right,hsl(240,1%,25%) 3%,hsl(0,0%,19%) 97%);--bg-gradient-jet:linear-gradient(to bottom right,hsla(240,1%,18%,.251) 0%,hsla(240,2%,11%,0) 100%),hsl(240,2%,13%);--jet:hsl(0,0%,22%);--onyx:hsl(240,1%,17%);--eerie-black-1:hsl(240,2%,13%);--eerie-black-2:hsl(240,2%,12%);--smoky-black:hsl(0,0%,7%);--white-1:hsl(0,0%,100%);--white-2:hsl(0,0%,98%);--orange-yellow-crayola:hsl(45,100%,72%);--light-gray:hsl(0,0%,84%);--ff-poppins:'Poppins',sans-serif;--fs-1:24px;--fs-2:18px;--fs-6:14px;--fw-300:300;--fw-500:500;--shadow-1:-4px 8px 24px hsla(0,0%,0%,.25);--transition-1:.25s ease}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{background:var(--smoky-black);font-family:var(--ff-poppins)}main{margin:15px 12px;margin-bottom:75px;min-width:259px}.sidebar{background:var(--eerie-black-2);border:1px solid var(--jet);border-radius:20px;padding:15px;box-shadow:var(--shadow-1);margin-bottom:15px;max-height:112px;overflow:hidden;transition:var(--transition-1)}.navbar{position:fixed;bottom:0;left:0;width:100%;background:hsla(240,1%,17%,.75);backdrop-filter:blur(10px);border:1px solid var(--jet);border-radius:12px 12px 0 0;box-shadow:var(--shadow-1);z-index:5}
   </style>
 
@@ -905,10 +907,11 @@
   <script src="./assets/js/script.js" defer></script>
 
   <!--
-    - ionicon link (async for non-blocking load with SRI for security)
+    - ionicon link (async/defer for non-blocking load)
+    - Using unpkg CDN with pinned version for stability
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async crossorigin="anonymous" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer crossorigin="anonymous" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 
 </body>
 
