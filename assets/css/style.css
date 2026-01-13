@@ -119,8 +119,14 @@
   #CUSTOM CURSOR
 \*-----------------------------------*/
 
-* {
-  cursor: none !important;
+/* Respecter prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    cursor: auto !important;
+  }
+  . cursor, .cursor-follower {
+    display: none;
+  }
 }
 
 .cursor {
