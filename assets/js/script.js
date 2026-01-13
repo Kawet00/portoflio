@@ -345,9 +345,8 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
           await sendWebhook(data);
           discordSuccess = true;
-          console.log('✅ Message envoyé sur Discord avec succès');
         } catch (discordError) {
-          console.error('❌ Erreur Discord webhook:', discordError);
+          console.error('❌ Erreur webhook:', discordError);
           // Continue même si Discord échoue
         }
       }
@@ -357,18 +356,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Succès
         btnText.textContent = 'Message envoyé !';
         form.reset();
-        
-        // Message de succès personnalisé selon les services
-        let successMessage = '';
-        if (discordSuccess && formspreeSuccess) {
-          successMessage = '✅ Message envoyé ! 🎯 Discord + Formspree OK';
-        } else if (discordSuccess) {
-          successMessage = '✅ Message envoyé sur Discord !';
-        } else if (formspreeSuccess) {
-          successMessage = '✅ Message envoyé via Formspree !';
-        }
-        
-        showNotification(successMessage, 'success');
         
         setTimeout(() => {
           btnText.textContent = originalText;
@@ -400,7 +387,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const webhookData = {
       username: "Portfolio Contact 📬",
-      avatar_url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop&crop=face", // Avatar contact
       content: `🚨 **Nouveau contact depuis le portfolio !**`,
       embeds: [{
         title: "📧 Nouveau Message de Contact",
@@ -440,13 +426,6 @@ document.addEventListener('DOMContentLoaded', function() {
             inline: true
           }
         ],
-        thumbnail: {
-          url: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=100&h=100&fit=crop"
-        },
-        footer: {
-          text: "Portfolio Guileb Yassin • Contact Form",
-          icon_url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=20&h=20&fit=crop"
-        },
         timestamp: new Date().toISOString()
       }]
     };
@@ -461,7 +440,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Discord webhook failed: ${response.status} - ${errorText}`);
+      throw new Error(`webhook failed: ${response.status} - ${errorText}`);
     }
     
     return response;
@@ -482,18 +461,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const testData = {
       name: "Test Portfolio",
       email: "test@exemple.com", 
-      message: "Ceci est un message de test pour vérifier que le webhook Discord fonctionne correctement.",
+      message: "Ceci est un message de test pour vérifier que le webhook fonctionne correctement.",
       timestamp: new Date().toISOString(),
       source: 'Portfolio Test'
     };
     
     try {
       await sendWebhook(testData);
-      console.log('✅ Test Discord webhook réussi !');
-      showNotification('Test Discord réussi ! 🎯', 'success');
+      console.log('✅ Test webhook réussi !');
+      showNotification('Test réussi ! 🎯', 'success');
     } catch (error) {
-      console.error('❌ Test Discord webhook échoué:', error);
-      showNotification('❌ Test Discord échoué. Vérifiez l\'URL du webhook.', 'error');
+      console.error('❌ Test webhook échoué:', error);
+      showNotification('❌ Test échoué. Vérifiez l\'URL du webhook.', 'error');
     }
   };
   
