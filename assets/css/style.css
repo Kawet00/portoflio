@@ -1052,6 +1052,9 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-7);
   font-weight: var(--fw-400);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 
