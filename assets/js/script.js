@@ -196,6 +196,75 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// Custom Cursor
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.querySelector('.cursor');
+  const cursorFollower = document.querySelector('.cursor-follower');
+  
+  // Check if device supports hover (desktop)
+  if (window.matchMedia("(hover: hover)").matches) {
+    
+    let mouseX = 0, mouseY = 0;
+    let followerX = 0, followerY = 0;
+    
+    // Update cursor position
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      
+      // Move main cursor instantly
+      cursor.style.left = mouseX + 'px';
+      cursor.style.top = mouseY + 'px';
+    });
+    
+    // Smooth follower animation
+    function animateFollower() {
+      const dx = mouseX - followerX;
+      const dy = mouseY - followerY;
+      
+      followerX += dx * 0.1;
+      followerY += dy * 0.1;
+      
+      cursorFollower.style.left = followerX + 'px';
+      cursorFollower.style.top = followerY + 'px';
+      
+      requestAnimationFrame(animateFollower);
+    }
+    
+    animateFollower();
+    
+    // Interactive elements
+    const interactiveElements = document.querySelectorAll(
+      'a, button, .service-item, .content-card, .project-item, [data-nav-link], .info_more-btn, .form-btn'
+    );
+    
+    interactiveElements.forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('active');
+        cursorFollower.classList.add('active');
+      });
+      
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('active');
+        cursorFollower.classList.remove('active');
+      });
+    });
+    
+    // Hide cursor when leaving window
+    document.addEventListener('mouseenter', () => {
+      cursor.style.opacity = '1';
+      cursorFollower.style.opacity = '1';
+    });
+    
+    document.addEventListener('mouseleave', () => {
+      cursor.style.opacity = '0';
+      cursorFollower.style.opacity = '0';
+    });
+  }
+});
+
+
+
 // Webhook form handler
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('contact-form');
