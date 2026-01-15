@@ -165,8 +165,8 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-
-// Simple card animations with IntersectionObserver
+// Fade-in animations for cards using IntersectionObserver
+// Cards fade in and slide up when they enter the viewport
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.service-item, .content-card, .project-item');
   
