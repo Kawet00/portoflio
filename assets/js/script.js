@@ -165,12 +165,12 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-
-// Parallax effect for cards
+// Fade-in animations for cards using IntersectionObserver
+// Cards fade in and slide up when they enter the viewport
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.service-item, .content-card, .project-item');
   
-  // Intersection Observer for card animations
+  // Intersection Observer for card animations (lightweight)
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -192,30 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     cardObserver.observe(card);
   });
-
-  // Mouse parallax effect
-  let mouseX = 0, mouseY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX / window.innerWidth - 0.5;
-    mouseY = e.clientY / window.innerHeight - 0.5;
-  });
-
-  function updateParallax() {
-    cards.forEach((card, index) => {
-      const speed = (index % 3 + 1) * 0.5;
-      const x = mouseX * speed;
-      const y = mouseY * speed;
-      
-      if (card.style.opacity === '1') {
-        card.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    });
-    
-    requestAnimationFrame(updateParallax);
-  }
-  
-  updateParallax();
 });
 
 
