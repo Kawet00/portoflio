@@ -563,6 +563,10 @@ main {
   border-radius: 20px;
 }
 
+.avatar-box img {
+  width: 80px;
+}
+
 .info-content .name {
   color: var(--white-2);
   font-size: var(--fs-3);
