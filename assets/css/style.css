@@ -825,6 +825,129 @@ main {
   line-height: 1.6;
 }
 
+/**
+ * Service icon box styles for ion-icons
+ */
+.service-icon-box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.service-icon-box ion-icon {
+  font-size: 40px;
+  color: var(--orange-yellow-crayola);
+}
+
+
+/**
+ * #HIGHLIGHT BOX
+ */
+
+.highlight-box {
+  background: var(--border-gradient-onyx);
+  padding: 20px;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.highlight-box ion-icon {
+  font-size: 28px;
+  color: var(--orange-yellow-crayola);
+  flex-shrink: 0;
+}
+
+
+/**
+ * #TECHNOLOGIES
+ */
+
+.technologies {
+  margin-bottom: 35px;
+}
+
+.technologies-title {
+  margin-bottom: 25px;
+}
+
+.technologies-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  gap: 20px;
+}
+
+.technologies-item {
+  background: var(--border-gradient-onyx);
+  padding: 20px 15px;
+  border-radius: 14px;
+  border: 1px solid var(--jet);
+  text-align: center;
+  transition: var(--transition-1);
+  cursor: default;
+}
+
+.technologies-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-2);
+}
+
+.tech-icon-box {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-gradient-jet);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px;
+  border-radius: 12px;
+}
+
+.tech-icon-box ion-icon {
+  font-size: 32px;
+  color: var(--orange-yellow-crayola);
+}
+
+.tech-name {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+}
+
+
+/**
+ * #PROJECT TAGS
+ */
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.project-tags .tag {
+  background: var(--bg-gradient-jet);
+  color: var(--light-gray);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--jet);
+  transition: var(--transition-1);
+}
+
+.project-item:hover .tag {
+  border-color: var(--orange-yellow-crayola);
+  color: var(--orange-yellow-crayola);
+}
+
 
 /**
  * #testimonials 
@@ -2197,5 +2320,33 @@ textarea.form-input::-webkit-resizer { display: none; }
 	 */
 
   .timeline-text { max-width: 700px; }
+
+
+  /**
+   * TECHNOLOGIES
+   */
+
+  .technologies-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+  }
+
+
+  /**
+   * PROJECT TAGS
+   */
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .project-tags .tag {
+    font-size: var(--fs-8);
+    padding: 4px 10px;
+  }
 
 }
