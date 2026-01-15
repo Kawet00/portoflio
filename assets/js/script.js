@@ -166,11 +166,11 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 
 
-// Parallax effect for cards
+// Simple card animations with IntersectionObserver
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.service-item, .content-card, .project-item');
   
-  // Intersection Observer for card animations
+  // Intersection Observer for card animations (lightweight)
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -192,99 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     cardObserver.observe(card);
   });
-
-  // Mouse parallax effect
-  let mouseX = 0, mouseY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX / window.innerWidth - 0.5;
-    mouseY = e.clientY / window.innerHeight - 0.5;
-  });
-
-  function updateParallax() {
-    cards.forEach((card, index) => {
-      const speed = (index % 3 + 1) * 0.5;
-      const x = mouseX * speed;
-      const y = mouseY * speed;
-      
-      if (card.style.opacity === '1') {
-        card.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    });
-    
-    requestAnimationFrame(updateParallax);
-  }
-  
-  updateParallax();
-});
-
-
-
-// Custom Cursor
-document.addEventListener('DOMContentLoaded', function() {
-  const cursor = document.querySelector('.cursor');
-  const cursorFollower = document.querySelector('.cursor-follower');
-  
-  // Check if device supports hover (desktop)
-  if (window.matchMedia("(hover: hover)").matches) {
-    
-    let mouseX = 0, mouseY = 0;
-    let followerX = 0, followerY = 0;
-    
-    // Update cursor position
-    document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      
-      // Move main cursor instantly
-      cursor.style.left = mouseX + 'px';
-      cursor.style.top = mouseY + 'px';
-    });
-    
-    // Smooth follower animation
-    function animateFollower() {
-      const dx = mouseX - followerX;
-      const dy = mouseY - followerY;
-      
-      followerX += dx * 0.1;
-      followerY += dy * 0.1;
-      
-      cursorFollower.style.left = followerX + 'px';
-      cursorFollower.style.top = followerY + 'px';
-      
-      requestAnimationFrame(animateFollower);
-    }
-    
-    animateFollower();
-    
-    // Interactive elements
-    const interactiveElements = document.querySelectorAll(
-      'a, button, .service-item, .content-card, .project-item, [data-nav-link], .info_more-btn, .form-btn'
-    );
-    
-    interactiveElements.forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        cursor.classList.add('active');
-        cursorFollower.classList.add('active');
-      });
-      
-      el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('active');
-        cursorFollower.classList.remove('active');
-      });
-    });
-    
-    // Hide cursor when leaving window
-    document.addEventListener('mouseenter', () => {
-      cursor.style.opacity = '1';
-      cursorFollower.style.opacity = '1';
-    });
-    
-    document.addEventListener('mouseleave', () => {
-      cursor.style.opacity = '0';
-      cursorFollower.style.opacity = '0';
-    });
-  }
 });
 
 
