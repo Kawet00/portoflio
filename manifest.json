@@ -1,0 +1,21 @@
+{
+  "name": "Guileb Yassin Portfolio",
+  "short_name": "Guileb Yassin",
+  "description": "Portfolio de Guileb Yassin, étudiant en BTS SIO spécialisation cybersécurité et réseaux",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#121212",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/images/avatar-1.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "portfolio", "étudiant", "bts", "informatique", "sio", "sisr", "réseau"],
+  "lang": "fr",
+  "dir": "ltr"
+}

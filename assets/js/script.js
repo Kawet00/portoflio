@@ -50,15 +50,15 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+if (overlay) overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
@@ -165,12 +165,12 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 
-
-// Parallax effect for cards
+// Fade-in animations for cards using IntersectionObserver
+// Cards fade in and slide up when they enter the viewport
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.service-item, .content-card, .project-item');
   
-  // Intersection Observer for card animations
+  // Intersection Observer for card animations (lightweight)
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -192,30 +192,6 @@ document.addEventListener('DOMContentLoaded', function() {
     card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     cardObserver.observe(card);
   });
-
-  // Mouse parallax effect
-  let mouseX = 0, mouseY = 0;
-  
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX / window.innerWidth - 0.5;
-    mouseY = e.clientY / window.innerHeight - 0.5;
-  });
-
-  function updateParallax() {
-    cards.forEach((card, index) => {
-      const speed = (index % 3 + 1) * 0.5;
-      const x = mouseX * speed;
-      const y = mouseY * speed;
-      
-      if (card.style.opacity === '1') {
-        card.style.transform = `translate(${x}px, ${y}px)`;
-      }
-    });
-    
-    requestAnimationFrame(updateParallax);
-  }
-  
-  updateParallax();
 });
 
 
@@ -345,9 +321,8 @@ document.addEventListener('DOMContentLoaded', function() {
         try {
           await sendWebhook(data);
           discordSuccess = true;
-          console.log('✅ Message envoyé sur Discord avec succès');
         } catch (discordError) {
-          console.error('❌ Erreur Discord webhook:', discordError);
+          console.error('❌ Erreur webhook:', discordError);
           // Continue même si Discord échoue
         }
       }
@@ -357,18 +332,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Succès
         btnText.textContent = 'Message envoyé !';
         form.reset();
-        
-        // Message de succès personnalisé selon les services
-        let successMessage = '';
-        if (discordSuccess && formspreeSuccess) {
-          successMessage = '✅ Message envoyé ! 🎯 Discord + Formspree OK';
-        } else if (discordSuccess) {
-          successMessage = '✅ Message envoyé sur Discord !';
-        } else if (formspreeSuccess) {
-          successMessage = '✅ Message envoyé via Formspree !';
-        }
-        
-        showNotification(successMessage, 'success');
         
         setTimeout(() => {
           btnText.textContent = originalText;
@@ -400,7 +363,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const webhookData = {
       username: "Portfolio Contact 📬",
-      avatar_url: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=100&h=100&fit=crop&crop=face", // Avatar contact
       content: `🚨 **Nouveau contact depuis le portfolio !**`,
       embeds: [{
         title: "📧 Nouveau Message de Contact",
@@ -440,13 +402,6 @@ document.addEventListener('DOMContentLoaded', function() {
             inline: true
           }
         ],
-        thumbnail: {
-          url: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=100&h=100&fit=crop"
-        },
-        footer: {
-          text: "Portfolio Guileb Yassin • Contact Form",
-          icon_url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=20&h=20&fit=crop"
-        },
         timestamp: new Date().toISOString()
       }]
     };
@@ -461,7 +416,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Discord webhook failed: ${response.status} - ${errorText}`);
+      throw new Error(`webhook failed: ${response.status} - ${errorText}`);
     }
     
     return response;
@@ -482,18 +437,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const testData = {
       name: "Test Portfolio",
       email: "test@exemple.com", 
-      message: "Ceci est un message de test pour vérifier que le webhook Discord fonctionne correctement.",
+      message: "Ceci est un message de test pour vérifier que le webhook fonctionne correctement.",
       timestamp: new Date().toISOString(),
       source: 'Portfolio Test'
     };
     
     try {
       await sendWebhook(testData);
-      console.log('✅ Test Discord webhook réussi !');
-      showNotification('Test Discord réussi ! 🎯', 'success');
+      console.log('✅ Test webhook réussi !');
+      showNotification('Test réussi ! 🎯', 'success');
     } catch (error) {
-      console.error('❌ Test Discord webhook échoué:', error);
-      showNotification('❌ Test Discord échoué. Vérifiez l\'URL du webhook.', 'error');
+      console.error('❌ Test webhook échoué:', error);
+      showNotification('❌ Test échoué. Vérifiez l\'URL du webhook.', 'error');
     }
   };
   

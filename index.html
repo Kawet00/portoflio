@@ -1,11 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guileb Yassin Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <title>Guileb Yassin Portfolio | Étudiant BTS SIO Cybersécurité & Réseaux</title>
+  
+<!-- SEO core -->
+  <meta name="description" content="Portfolio de Guileb Yassin, étudiant en BTS SIO (cybersécurité et réseaux) en option SISR, projets web, réseau et administration système. Disponible pour une alternance pour l'année 2026-2027.">
+  <meta name="keywords" content="Guileb, Guileb Yassin, BTS SIO, SIO, SISR, SLAM, BTS, Lycée, Marie Curie, Lycée Marie Curie, portfolio, Yassin, cybersécurité, réseaux, développement web, administration système, portfolio, alternance réseau/cybersécurité, Marseille">
+  <meta name="author" content="Guileb Yassin">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://guileby.me/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Guileb Yassin | Étudiant BTS SIO (cybersécurité & réseaux)">
+  <meta property="og:description" content="Projets web, réseau et administration système. Disponible pour une alternance pour l'année 2026-2027.">
+  <meta property="og:url" content="https://guileby.me/">
+  <meta property="og:image" content="https://guileby.me/assets/images/avatar-1.png">
+  <meta property="og:image:width" content="969">
+  <meta property="og:image:height" content="969">
+  <meta property="og:image:alt" content="Photo de profil de Guileb Yassin">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Portfolio Guileb Yassin">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guileb Yassin | Étudiant BTS SIO (cybersécurité & réseaux)">
+  <meta name="twitter:description" content="Projets web, réseau et administration système. Disponible pour une alternance pour l'année 2026-2027.">
+  <meta name="twitter:image" content="https://guileby.me/assets/images/avatar-1.png">
+  <meta name="twitter:image:alt" content="Photo de profil de Guileb Yassin">
 
   <script type="application/ld+json">
     {
@@ -39,18 +67,47 @@
     - favicon
   -->
   <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="./assets/images/avatar-1.png">
+
+  <!-- PWA / Mobile optimization -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Guileb Yassin">
+  <link rel="manifest" href="/manifest.json">
 
   <!--
-    - custom css link
+    - Resource hints for external resources
   -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+  <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!--
+    - google font link with display=swap for better performance
+  -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"></noscript>
+
+  <!--
+    - Critical CSS inline for above-the-fold content
+    - Includes: CSS variables, reset, body styles, main layout, sidebar, navbar
+    - Generated from style.css lines 18-631 (core layout and navigation)
+    - Minified to reduce HTML size - source can be found in assets/css/style.css
+  -->
+  <style>
+    /* Critical above-the-fold styles - minified for performance */
+    :root{--bg-gradient-onyx:linear-gradient(to bottom right,hsl(240,1%,25%) 3%,hsl(0,0%,19%) 97%);--bg-gradient-jet:linear-gradient(to bottom right,hsla(240,1%,18%,.251) 0%,hsla(240,2%,11%,0) 100%),hsl(240,2%,13%);--jet:hsl(0,0%,22%);--onyx:hsl(240,1%,17%);--eerie-black-1:hsl(240,2%,13%);--eerie-black-2:hsl(240,2%,12%);--smoky-black:hsl(0,0%,7%);--white-1:hsl(0,0%,100%);--white-2:hsl(0,0%,98%);--orange-yellow-crayola:hsl(45,100%,72%);--light-gray:hsl(0,0%,84%);--ff-poppins:'Poppins',sans-serif;--fs-1:24px;--fs-2:18px;--fs-6:14px;--fw-300:300;--fw-500:500;--shadow-1:-4px 8px 24px hsla(0,0%,0%,.25);--transition-1:.25s ease}*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}body{background:var(--smoky-black);font-family:var(--ff-poppins)}main{margin:15px 12px;margin-bottom:75px;min-width:259px}.sidebar{background:var(--eerie-black-2);border:1px solid var(--jet);border-radius:20px;padding:15px;box-shadow:var(--shadow-1);margin-bottom:15px;max-height:112px;overflow:hidden;transition:var(--transition-1)}.navbar{position:fixed;bottom:0;left:0;width:100%;background:hsla(240,1%,17%,.75);backdrop-filter:blur(10px);border:1px solid var(--jet);border-radius:12px 12px 0 0;box-shadow:var(--shadow-1);z-index:5}
+  </style>
+
+  <!--
+    - Main stylesheet (non-blocking)
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
 </head>
 
 <body>
@@ -74,7 +131,10 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/avatar-1.png" alt="Guileb Yassin" width="80">
+          <picture>
+            <source srcset="./assets/images/avatar-1.webp" type="image/webp">
+            <img src="./assets/images/avatar-1.png" alt="Guileb Yassin">
+          </picture>
         </figure>
 
         <div class="info-content">
@@ -241,12 +301,100 @@
 
         <section class="about-text">
           <p>
-            Étudiant en BTS SIO spécialisation cybersécurité et réseaux. 
-            Passionné par l'informatique, rigoureux, autonome et curieux.
+            Étudiant en BTS SIO spécialisation <strong>cybersécurité et réseaux</strong> (option SISR). 
+            Passionné par l'informatique, rigoureux, autonome et curieux, je me forme aux technologies modernes 
+            pour devenir un expert en infrastructure et sécurité des systèmes d'information.
           </p>
-          <p>
-            <strong>Recherche un stage</strong> - à partir du 25 Mai 2026 pour développer mes compétences techniques en situation réelle et pouvoir réussir ma première année de BTS.
+          <p class="highlight-box">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <strong>Recherche une alternance</strong> pour l'année 2026-2027 en cybersécurité ou administration système/réseau. 
+            Disponible pour contribuer à vos projets et développer mes compétences en situation professionnelle.
           </p>
+        </section>
+
+
+        <!--
+          - technologies
+        -->
+
+        <section class="technologies">
+
+          <h3 class="h3 technologies-title">Technologies & Outils</h3>
+
+          <ul class="technologies-list" role="list" aria-label="Technologies et outils maîtrisés">
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="logo-html5"></ion-icon>
+              </div>
+              <div class="tech-name">HTML5</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="logo-css3"></ion-icon>
+              </div>
+              <div class="tech-name">CSS3</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="logo-javascript"></ion-icon>
+              </div>
+              <div class="tech-name">JavaScript</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="logo-python"></ion-icon>
+              </div>
+              <div class="tech-name">Python</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="server-outline"></ion-icon>
+              </div>
+              <div class="tech-name">Linux</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+              </div>
+              <div class="tech-name">Cybersécurité</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="git-network-outline"></ion-icon>
+              </div>
+              <div class="tech-name">Réseaux</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="logo-github"></ion-icon>
+              </div>
+              <div class="tech-name">Git</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="albums-outline"></ion-icon>
+              </div>
+              <div class="tech-name">MySQL</div>
+            </li>
+
+            <li class="technologies-item" role="listitem">
+              <div class="tech-icon-box" aria-hidden="true">
+                <ion-icon name="hardware-chip-outline"></ion-icon>
+              </div>
+              <div class="tech-name">Docker</div>
+            </li>
+
+          </ul>
+
         </section>
 
 
@@ -258,67 +406,67 @@
 
           <h3 class="h3 service-title">Mes Compétences</h3>
 
-          <ul class="service-list">
+          <ul class="service-list" role="list" aria-label="Domaines de compétences">
 
-            <li class="service-item">
+            <li class="service-item" role="listitem">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              <div class="service-icon-box" aria-hidden="true">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web Design</h4>
+                <h4 class="h4 service-item-title">Cybersécurité</h4>
 
                 <p class="service-item-text">
-                  Création d'interfaces utilisateur modernes avec HTML5, CSS3 et frameworks responsive.
+                  Sécurisation des systèmes, analyse des vulnérabilités, mise en place de politiques de sécurité et protection des données.
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" role="listitem">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              <div class="service-icon-box" aria-hidden="true">
+                <ion-icon name="git-network-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Développement Web</h4>
+                <h4 class="h4 service-item-title">Administration Réseau</h4>
 
                 <p class="service-item-text">
-                  Applications web avec JavaScript, PHP, bases de données MySQL/PostgreSQL.
+                  Configuration et maintenance d'infrastructures réseau, routage, commutation, protocoles TCP/IP et services réseau.
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" role="listitem">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="pc icon" width="40">
+              <div class="service-icon-box" aria-hidden="true">
+                <ion-icon name="server-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
                 <h4 class="h4 service-item-title">Administration Système</h4>
 
                 <p class="service-item-text">
-                  Installation, configuration et maintenance de postes de travail et serveurs.
+                  Gestion de serveurs Linux/Windows, virtualisation, automatisation des tâches et supervision d'infrastructure.
                 </p>
               </div>
 
             </li>
 
-            <li class="service-item">
+            <li class="service-item" role="listitem">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="pc icon" width="40">
+              <div class="service-icon-box" aria-hidden="true">
+                <ion-icon name="code-slash-outline"></ion-icon>
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Création d'ordinateur</h4>
+                <h4 class="h4 service-item-title">Développement Web</h4>
 
                 <p class="service-item-text">
-                 Consulatation, assemblage et optimisation de PC sur mesure.
+                 Création d'applications web modernes avec HTML5, CSS3, JavaScript, PHP et bases de données MySQL/PostgreSQL.
                 </p>
               </div>
 
@@ -327,204 +475,8 @@
           </ul>
 
         </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <!--<section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-              </div>
-
-            </div>
-
-          </section>
-
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <!--<section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>-->
 
       </article>
-
 
 
 
@@ -597,12 +549,12 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Recherche de Stage</h4>
+              <h4 class="h4 timeline-item-title">Recherche d'Alternance</h4>
 
               <span>2026</span>
 
               <p class="timeline-text">
-                Je suis actuellement à la recherche d'un stage en entreprise pour Mai 2026, dans le domaine du réseau.
+                Je suis actuellement à la recherche d'une alternance pour l'année 2026-2027, dans le domaine du réseau ou de la cybersécurité.
               </p>
 
             </li>
@@ -614,7 +566,7 @@
               <span>2025</span>
 
               <p class="timeline-text">
-                J'ai passer mon BAFA en 2025 pour pouvoir devenir animateur en centre social ou de loisir.
+                J'ai passé mon BAFA en 2025 pour pouvoir devenir animateur en centre social ou de loisir.
               </p>
 
             </li>
@@ -632,12 +584,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="65">65%</data>
+                <h5 class="h5">Administration Système (Linux/Windows)</h5>
+                <data value="75">75%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 65%;"></div>
+                <div class="skill-progress-fill" style="width: 75%;"></div>
               </div>
 
             </li>
@@ -645,7 +597,7 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Développement Web</h5>
+                <h5 class="h5">Réseaux & TCP/IP</h5>
                 <data value="70">70%</data>
               </div>
 
@@ -658,12 +610,12 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Réseaux</h5>
-                <data value="60">60%</data>
+                <h5 class="h5">Cybersécurité</h5>
+                <data value="65">65%</data>
               </div>
 
               <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 60%;"></div>
+                <div class="skill-progress-fill" style="width: 65%;"></div>
               </div>
 
             </li>
@@ -671,7 +623,46 @@
             <li class="skills-item">
 
               <div class="title-wrapper">
-                <h5 class="h5">Anglais</h5>
+                <h5 class="h5">Développement Web (HTML/CSS/JS)</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Bases de données (SQL)</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Python & Scripting</h5>
+                <data value="65">65%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 65%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Anglais Technique</h5>
                 <data value="85">85%</data>
               </div>
 
@@ -723,7 +714,7 @@
 
             <button class="filter-select" data-select>
 
-              <div class="select-value" data-selecct-value>Tout</div>
+              <div class="select-value" data-select-value>Tout</div>
 
               <div class="select-icon">
                 <ion-icon name="chevron-down"></ion-icon>
@@ -759,50 +750,125 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/UT_Bot-Logo.png" alt="discord bot" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/UT_Bot-Logo.webp" type="image/webp">
+                    <img src="./assets/images/UT_Bot-Logo.png" alt="Bot Discord Utilitaire - Logo" width="2000" height="2000" loading="lazy">
+                  </picture>
                 </figure>
 
                 <h3 class="project-title">Bot Discord Utilitaire</h3>
 
                 <p class="project-category">Développement</p>
+                
+                <div class="project-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">Discord.py</span>
+                  <span class="tag">API</span>
+                </div>
 
               </a>
             </li>
 
             <li class="project-item" data-filter-item data-category="développement">
-              <a href="https://kawet00.github.com/Cours/" target="_blank">
+              <a href="https://kawet00.github.io/Cours/" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Cours.png" alt="cours" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/Cours.webp" type="image/webp">
+                    <img src="./assets/images/Cours.png" alt="Cours HTML, CSS et SQL" width="1080" height="552" loading="lazy">
+                  </picture>
                 </figure>
 
-                <h3 class="project-title">Simples petits cours sur la base de HTML, CSS et SQL</h3>
+                <h3 class="project-title">Cours interactifs HTML, CSS et SQL</h3>
 
                 <p class="project-category">Développement</p>
+                
+                <div class="project-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                  <span class="tag">JavaScript</span>
+                </div>
 
               </a>
             </li>
 
             <li class="project-item" data-filter-item data-category="développement">
-              <a href="https://kawet00.github.com/Typing/" target="_blank">
+              <a href="https://kawet00.github.io/Typing/" target="_blank">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/Typing.png" alt="typing" loading="lazy">
+                  <picture>
+                    <source srcset="./assets/images/Typing.webp" type="image/webp">
+                    <img src="./assets/images/Typing.png" alt="Test de vitesse de frappe et temps de réaction" width="894" height="1080" loading="lazy">
+                  </picture>
                 </figure>
 
-                <h3 class="project-title">Un site pour savoir notre vitesse de frappe et notre temps de réaction, fait en HTML, CSS et JavaScript</h3>
+                <h3 class="project-title">Test de Vitesse de Frappe & Temps de Réaction</h3>
 
                 <p class="project-category">Développement</p>
+                
+                <div class="project-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">HTML5</span>
+                  <span class="tag">CSS3</span>
+                </div>
 
               </a>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="réseaux">
+              <div class="project-card">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="document-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/network-icon.svg" alt="Infrastructure réseau" width="318" height="318" loading="lazy" class="project-icon-placeholder">
+                </figure>
+
+                <h3 class="project-title">Configuration Infrastructure Réseau</h3>
+
+                <p class="project-category">Réseaux</p>
+                
+                <div class="project-tags">
+                  <span class="tag">Cisco</span>
+                  <span class="tag">TCP/IP</span>
+                  <span class="tag">VLAN</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="project-item" data-filter-item data-category="réseaux">
+              <div class="project-card">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="document-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/security-icon.svg" alt="Projet cybersécurité" width="318" height="318" loading="lazy" class="project-icon-placeholder">
+                </figure>
+
+                <h3 class="project-title">Audit de Sécurité & Hardening</h3>
+
+                <p class="project-category">Réseaux</p>
+                
+                <div class="project-tags">
+                  <span class="tag">Sécurité</span>
+                  <span class="tag">Linux</span>
+                  <span class="tag">Firewall</span>
+                </div>
+
+              </div>
             </li>
 
           </ul>
@@ -866,21 +932,74 @@
 
   </main>
 
-
-
-
-
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Guileb Yassin",
+    "alternateName": "Yassin Guileb",
+    "jobTitle": "Étudiant en BTS SIO (cybersécurité et réseaux)",
+    "description": "Étudiant en BTS SIO spécialisation cybersécurité et réseaux, passionné par l'informatique, rigoureux, autonome et curieux",
+    "url": "https://guileby.me/",
+    "image": "https://guileby.me/assets/images/avatar-1.png",
+    "email": "mailto:yassinguileb@proton.me",
+    "telephone": "+33-6-23-04-84-90",
+    "birthDate": "2007-09-18",
+    "gender": "Male",
+    "nationality": "French",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Marseille",
+      "addressCountry": "FR"
+    },
+    "sameAs": [
+      "https://facebook.com/guileby.pro",
+      "https://linkedin.com/in/guileby",
+      "https://github.com/Kawet00"
+    ],
+    "knowsAbout": [
+      "Cybersécurité",
+      "Réseaux informatiques",
+      "Développement Web",
+      "Administration Système",
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "MySQL",
+      "PostgreSQL"
+    ],
+    "seeks": {
+      "@type": "JobPosting",
+      "title": "Alternance en cybersécurité et réseaux",
+      "description": "Recherche une alternance pour l'année 2026-2027",
+      "datePosted": "2025-09-01",
+      "validThrough": "2027-05-25",
+      "employmentType": "INTERN",
+      "jobLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Marseille",
+          "addressCountry": "FR"
+        }
+      }
+    }
+  }
+  </script>
 
   <!--
-    - custom js link
+    - custom js link (deferred for non-blocking load)
   -->
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.js" defer></script>
 
   <!--
-    - ionicon link
+    - ionicon link (async/defer for non-blocking load)
+    - Using unpkg CDN with pinned version for stability
   -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" async></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer></script>
 
 </body>
 
