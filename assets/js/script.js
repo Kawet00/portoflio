@@ -253,10 +253,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (recaptchaElement) {
       const siteKey = recaptchaElement.getAttribute('data-sitekey');
-      if (!siteKey || siteKey === 'YOUR_RECAPTCHA_SITE_KEY') {
-        showNotification('Ajoutez votre clé site reCAPTCHA dans le formulaire.', 'error');
-        return;
-      }
 
       const token = typeof grecaptcha !== 'undefined' ? grecaptcha.getResponse() : '';
       if (!token) {
