@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (recaptchaElement) {
       const siteKey = recaptchaElement.getAttribute('data-sitekey');
-      if (!siteKey || siteKey === 'YOUR_RECAPTCHA_SITE_KEY') {
+      if (!siteKey || siteKey === '6Ld_pJIsAAAAAOgXvIbq69lEzxsCAoV6jgQNAzKS') {
         showNotification('Ajoutez votre clé site reCAPTCHA dans le formulaire.', 'error');
         return;
       }
