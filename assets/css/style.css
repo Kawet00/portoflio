@@ -1,28 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * copyright 2022 @codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
-
-  /**
-   * colors
-   */
-
-  /* gradient */
-
   --bg-gradient-onyx: linear-gradient(
     to bottom right, 
     hsl(240, 1%, 25%) 3%, 
@@ -54,7 +30,7 @@
     hsl(35, 100%, 68%)
   );
 
-  /* solid */
+  /* Couleurs */
 
   --jet: hsl(0, 0%, 22%);
   --onyx: hsl(240, 1%, 17%);
@@ -69,14 +45,8 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 
-  /**
-   * typography
-   */
-
-  /* font-family */
+  /* Typographie */
   --ff-poppins: 'Poppins', sans-serif;
-
-  /* font-size */
   --fs-1: 24px;
   --fs-2: 18px;
   --fs-3: 17px;
@@ -86,15 +56,12 @@
   --fs-7: 13px;
   --fs-8: 11px;
 
-  /* font-weight */
   --fw-300: 300;
   --fw-400: 400;
   --fw-500: 500;
   --fw-600: 600;
 
-  /**
-   * shadow
-   */
+  /* Ombres */
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
   --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
@@ -102,16 +69,12 @@
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
   --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
-  /**
-   * transition
-   */
+  /* Transitions */
 
   --transition-1: 0.25s ease;
   --transition-2: 0.5s ease-in-out;
 
-  /**
-   * animations
-   */
+  /* Animations */
 
   --animation-fade-in: fadeIn 0.6s ease-out;
   --animation-slide-up: slideUp 0.6s ease-out;
@@ -120,9 +83,7 @@
 }
 
 
-/**
- * KEYFRAME ANIMATIONS
- */
+/* Animations globales */
 
 @keyframes fadeIn {
   from {
@@ -176,9 +137,7 @@
 
 
 
-/*-----------------------------------*\
-  #CUSTOM CURSOR
-\*-----------------------------------*/
+/* Curseur */
 
 /* Respecter prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
@@ -228,12 +187,12 @@
   border-color: rgba(255, 255, 255, 0.8);
 }
 
-/* Hover states for interactive elements */
+/* Masque le curseur natif sur elements interactifs */
 a, button, .service-item, .content-card, .project-item, [data-nav-link] {
   cursor: none !important;
 }
 
-/* Mobile responsive - show default cursor on touch devices */
+/* Appareils tactiles : retour au curseur natif */
 @media (hover: none) and (pointer: coarse) {
   * {
     cursor: auto !important;
@@ -247,9 +206,7 @@ a, button, .service-item, .content-card, .project-item, [data-nav-link] {
 
 
 
-/*-----------------------------------*\
-  #NOTIFICATIONS
-\*-----------------------------------*/
+/* Notifications */
 
 .notification {
   position: fixed;
@@ -285,9 +242,7 @@ a, button, .service-item, .content-card, .project-item, [data-nav-link] {
 
 
 
-/*-----------------------------------*\
-  #RESET
-\*-----------------------------------*/
+/* Reset */
 
 *, *::before, *::after {
   margin: 0;
@@ -334,9 +289,7 @@ body { background: var(--smoky-black); }
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+/* Styles Reutilisables */
 
 .sidebar,
 article {
@@ -429,8 +382,8 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar {
-  width: 5px; /* for vertical scrollbar */
-  height: 5px; /* for horizontal scrollbar */
+  width: 5px;
+  height: 5px;
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -519,13 +472,7 @@ article.active {
   50% { background-position: 100% 50%; }
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #MAIN
-\*-----------------------------------*/
+/* Layout Principal */
 
 main {
   margin: 15px 12px;
@@ -533,13 +480,7 @@ main {
   min-width: 259px;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #SIDEBAR
-\*-----------------------------------*/
+/* Sidebar */
 
 .sidebar {
   margin-bottom: 15px;
@@ -677,13 +618,7 @@ main {
 
 .social-item .social-link:hover { color: var(--light-gray); }
 
-
-
-
-
-/*-----------------------------------*\
-  #NAVBAR
-\*-----------------------------------*/
+/* Navigation */
 
 .navbar {
   position: fixed;
@@ -718,13 +653,7 @@ main {
 
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
-
-
-
-
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
+/* A Propos */
 
 .about .article-title { margin-bottom: 15px; }
 
@@ -751,10 +680,7 @@ main {
   animation-fill-mode: both;
 }
 
-
-/**
- * #service 
- */
+/* Bloc Competences */
 
 .service { 
   margin-bottom: 35px;
@@ -919,9 +845,7 @@ main {
   line-height: 1.6;
 }
 
-/**
- * Service icon box styles for ion-icons
- */
+/* Icônes des cartes de competences */
 .service-icon-box {
   width: 60px;
   height: 60px;
@@ -946,10 +870,7 @@ main {
   color: var(--white-1);
 }
 
-
-/**
- * #HIGHLIGHT BOX
- */
+/* Encart de mise en avant */
 
 .highlight-box {
   background: linear-gradient(135deg, var(--bg-gradient-jet), var(--border-gradient-onyx));
@@ -980,9 +901,7 @@ main {
 }
 
 
-/**
- * #TECHNOLOGIES
- */
+/* Bloc Technologies */
 
 .technologies {
   margin-bottom: 35px;
@@ -1062,9 +981,7 @@ main {
 }
 
 
-/**
- * #PROJECT TAGS
- */
+/* Tags de projet */
 
 .project-tags {
   display: flex;
@@ -1106,9 +1023,7 @@ main {
 }
 
 
-/**
- * #testimonials 
- */
+/* Testimonials */
 
 .testimonials { margin-bottom: 30px; }
 
@@ -1158,9 +1073,7 @@ main {
 }
 
 
-/**
- * #testimonials-modal
- */
+/* Modal testimonials */
 
 .modal-container {
   position: fixed;
@@ -1271,10 +1184,7 @@ main {
   line-height: 1.6;
 }
 
-
-/**
- * #clients 
- */
+/* Clients */
 
 .clients { margin-bottom: 15px; }
 
@@ -1306,20 +1216,12 @@ main {
 
 .clients-item img:hover { filter: grayscale(0); }
 
-
-
-
-
-/*-----------------------------------*\
-  #RESUME
-\*-----------------------------------*/
+/* CV */
 
 .article-title { margin-bottom: 30px; }
 
 
-/**
- * education and experience 
- */
+/* Education et experience */
 
 .timeline { margin-bottom: 30px; }
 
@@ -1380,9 +1282,7 @@ main {
 }
 
 
-/**
- * skills 
- */
+/* Competences */
 
 .skills-title { margin-bottom: 20px; }
 
@@ -1417,13 +1317,7 @@ main {
   border-radius: inherit;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #PORTFOLIO
-\*-----------------------------------*/
+/* Projets */
 
 .filter-list { display: none; }
 
@@ -1652,13 +1546,7 @@ main {
   font-weight: var(--fw-300);
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #BLOG
-\*-----------------------------------*/
+/* Section Blog */
 
 .blog-posts { margin-bottom: 10px; }
 
@@ -1740,13 +1628,7 @@ main {
   line-height: 1.6;
 }
 
-
-
-
-
-/*-----------------------------------*\
-  #CONTACT
-\*-----------------------------------*/
+/* Contact */
 
 .mapbox {
   position: relative;
@@ -1800,6 +1682,10 @@ textarea.form-input {
   margin-bottom: 25px;
 }
 
+.g-recaptcha {
+  margin-bottom: 20px;
+}
+
 textarea.form-input::-webkit-resizer { display: none; }
 
 .form-input:focus:invalid { border-color: var(--bittersweet-shimmer); }
@@ -1847,31 +1733,19 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn:disabled:hover::before { background: var(--bg-gradient-jet); }
 
+/* Responsive */
 
-
-
-
-/*-----------------------------------*\
-  #RESPONSIVE
-\*-----------------------------------*/
-
-/**
- * responsive larger than 450px screen
- */
+/* >= 450px */
 
 @media (min-width: 450px) {
 
-  /**
-   * client
-   */
+  /* Clients */
 
   .clients-item { min-width: calc(33.33% - 10px); }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG 
-   */
+  /* Projets + blog */
 
   .project-img,
   .blog-banner-box { height: auto; }
@@ -1882,21 +1756,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 580px screen
- */
+/* >= 580px */
 
 @media (min-width: 580px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* Variables */
 
   :root {
 
-    /**
-     * typography
-     */
+    /* Typographie */
 
     --fs-1: 32px;
     --fs-2: 24px;
@@ -1910,9 +1778,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #REUSED STYLE
-   */
+  /* Styles reutilisables */
 
   .sidebar, article {
     width: 520px;
@@ -1939,9 +1805,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #MAIN
-   */
+  /* Layout principal */
 
   main {
     margin-top: 60px;
@@ -1950,9 +1814,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #SIDEBAR
-   */
+  /* Sidebar */
 
   .sidebar {
     max-height: 180px;
@@ -1995,9 +1857,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #NAVBAR
-   */
+  /* Navigation */
 
   .navbar { border-radius: 20px 20px 0 0; }
 
@@ -2007,15 +1867,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #ABOUT
-   */
+  /* A propos */
 
   .about .article-title { margin-bottom: 20px; }
 
   .about-text { margin-bottom: 40px; }
 
-  /* service */
+  /* Bloc competences */
 
   .service-item {
     display: flex;
@@ -2032,7 +1890,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .service-content-box { text-align: left; }
 
-  /* testimonials */
+  /* Testimonials */
 
   .testimonials-title { margin-bottom: 25px; }
 
@@ -2065,7 +1923,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     -webkit-line-clamp: 2;
   }
 
-  /* testimonials modal */
+  /* Modal testimonials */
 
   .modal-container { padding: 20px; }
 
@@ -2097,7 +1955,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     width: 35px;
   }
 
-  /* clients */
+  /* Clients */
 
   .clients-list {
     gap: 50px;
@@ -2110,9 +1968,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #RESUME
-   */
+  /* CV */
 
   .timeline-list { margin-left: 65px; }
 
@@ -2128,9 +1984,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #PORTFOLIO, BLOG
-   */
+  /* Projets + blog */
 
   .project-img, .blog-banner-box { border-radius: 16px; }
 
@@ -2140,9 +1994,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * #CONTACT
-   */
+  /* Contact */
 
   .mapbox {
     height: 380px;
@@ -2171,15 +2023,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 768px screen
- */
+/* >= 768px */
 
 @media (min-width: 768px) {
 
-  /**
-   * REUSED STYLE
-   */
+  /* Styles reutilisables */
 
   .sidebar, article { width: 700px; }
 
@@ -2187,9 +2035,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * SIDEBAR
-   */
+  /* Sidebar */
 
   .contacts-list {
     grid-template-columns: 1fr 1fr;
@@ -2198,19 +2044,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * NAVBAR
-   */
+  /* Navigation */
 
   .navbar-link { --fs-8: 15px; }
 
 
 
-  /**
-   * ABOUT
-   */
+  /* A propos */
 
-  /* testimonials modal */
+  /* Modal testimonials */
 
   .testimonials-modal {
     gap: 35px;
@@ -2221,9 +2063,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * PORTFOLIO
-   */
+  /* Projets */
 
   .article-title { padding-bottom: 20px; }
 
@@ -2248,15 +2088,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .filter-item button.active { color: var(--orange-yellow-crayola); }
 
-  /* portfolio and blog grid */
+  /* Grille projets + blog */
 
   .project-list, .blog-posts-list { grid-template-columns: 1fr 1fr; }
 
 
 
-  /**
-   * CONTACT
-   */
+  /* Contact */
 
   .input-wrapper { grid-template-columns: 1fr 1fr; }
 
@@ -2271,21 +2109,15 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 1024px screen
- */
+/* >= 1024px */
 
 @media (min-width: 1024px) {
 
-  /**
-   * CUSTOM PROPERTY
-   */
+  /* Variables */
 
   :root {
 
-    /**
-    * shadow
-    */
+    /* Ombres */
 
     --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
     --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.125);
@@ -2295,9 +2127,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * REUSED STYLE
-   */
+  /* Styles reutilisables */
 
   .sidebar, article {
     width: 950px;
@@ -2306,9 +2136,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * MAIN 
-   */
+  /* Layout principal */
 
   main { margin-bottom: 60px; }
 
@@ -2320,9 +2148,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * NAVBAR
-   */
+  /* Navigation */
 
   .navbar {
     position: absolute;
@@ -2345,38 +2171,32 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * ABOUT
-   */
+  /* A propos */
 
-  /* service */
+  /* Bloc competences */
 
   .service-list {
     grid-template-columns: 1fr 1fr;
     gap: 20px 25px;
   }
 
-  /* testimonials */
+  /* Testimonials */
 
   .testimonials-item { min-width: calc(50% - 15px); }
 
-  /* clients */
+  /* Clients */
 
   .clients-item { min-width: calc(25% - 38px); }
 
 
 
-  /**
-   * PORTFOLIO
-   */
+  /* Projets */
 
   .project-list { grid-template-columns: repeat(3, 1fr); }
 
 
 
-  /**
-   * BLOG
-   */
+  /* Blog */
 
   .blog-banner-box { height: 230px; }
 
@@ -2386,15 +2206,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-/**
- * responsive larger than 1250px screen
- */
+/* >= 1250px */
 
 @media (min-width: 1250px) {
 
-  /**
-   * RESET
-   */
+  /* Scrollbar globale */
 
   body::-webkit-scrollbar { width: 20px; }
 
@@ -2414,9 +2230,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * REUSED STYLE
-   */
+  /* Styles reutilisables */
 
   .sidebar, article { width: auto; }
 
@@ -2424,9 +2238,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * MAIN
-   */
+  /* Layout principal */
 
   main {
     max-width: 1200px;
@@ -2445,9 +2257,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-   * SIDEBAR
-   */
+  /* Sidebar */
 
   .sidebar {
     position: sticky;
@@ -2499,16 +2309,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
 
-  /**
-	 * RESUME
-	 */
+  /* CV */
 
   .timeline-text { max-width: 700px; }
 
 
-  /**
-   * TECHNOLOGIES
-   */
+  /* Technologies */
 
   .technologies-list {
     display: grid;
@@ -2517,9 +2323,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
 
-  /**
-   * PROJECT TAGS
-   */
+  /* Tags de projet */
 
   .project-tags {
     display: flex;
@@ -2533,4 +2337,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     padding: 4px 10px;
   }
 
+}
+
+@media (max-width: 380px) {
+  .g-recaptcha {
+    transform: scale(0.9);
+    transform-origin: left top;
+  }
 }
