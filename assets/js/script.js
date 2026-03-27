@@ -146,23 +146,50 @@ for (let i = 0; i < formInputs.length; i++) {
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
+const activatePageByName = function (pageName) {
+  for (let i = 0; i < pages.length; i++) {
+    if (pageName === pages[i].dataset.page) {
+      pages[i].classList.add("active");
+      navigationLinks[i].classList.add("active");
+    } else {
+      pages[i].classList.remove("active");
+      navigationLinks[i].classList.remove("active");
+    }
+  }
+}
+
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+  navigationLinks[i].addEventListener("click", function (event) {
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
+    if (this.matches("a")) {
+      event.preventDefault();
     }
+
+    const pageName = this.textContent.trim().toLowerCase();
+
+    activatePageByName(pageName);
+    if (this.hash) {
+      history.replaceState(null, "", this.hash);
+    }
+    window.scrollTo(0, 0);
 
   });
 }
+
+window.addEventListener("DOMContentLoaded", function () {
+  const hashToPage = {
+    "#a-propos": "a propos",
+    "#cv": "cv",
+    "#projets": "projets",
+    "#contact": "contact"
+  };
+
+  const pageFromHash = hashToPage[window.location.hash.toLowerCase()];
+  if (pageFromHash) {
+    activatePageByName(pageFromHash);
+  }
+});
 
 
 // Fade-in animations for cards using IntersectionObserver
